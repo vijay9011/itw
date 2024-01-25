@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vijay Restaurent</title>
+</head>
+
+<body>
+    <header>
+        <h1>Vijay Restaurent</h1>
+        <p>Welcome to our culinary delight!</p>
+    </header>
+
+    <section id="menu">
+        <h2>Menu</h2>
+        <div class="menu-item" data-name="Shahi Paneer" data-price="12.99">
+            <div class="item-left">
+                <img src="https://myfoodstory.com/wp-content/uploads/2022/04/Shahi-Paneer-1.jpg" alt="Girl in a jacket"
+                    width="200" height="200">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div>
+                <h3>Shahi Paneer</h3>
+                <h5>Fresh tomatoes, mozzarella, basil</h5>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat nesciunt corrupti ex recusandae sunt
+                    soluta voluptatem corporis temporibus excepturi, repellendus assumenda iste tempore blanditiis animi
+                    reprehenderit accusantium aperiam exercitationem cupiditate omnis placeat doloribus. Maiores eius
+                    doloribus possimus, voluptatibus quos pariatur inventore id voluptates, repellat optio aspernatur
+                    nemo voluptatem dignissimos? Atque rem autem expedita iusto, eaque vero iste tenetur praesentium,
+                    quia sint esse minima beatae, delectus facere. Distinctio quo laborum nemo, sit officiis
+                    exercitationem porro suscipit amet adipisci explicabo dignissimos, consectetur iusto quisquam!
+                    Cupiditate cum veritatis nobis. Dignissimos et quo recusandae itaque enim cum veniam, dolorum
+                    deleniti corrupti, animi est? Accusantium?</p>
+            </div>
+        </div>
+
+        <div class="menu-item" data-name="Paneer" data-price="12.99">
+            <div class="item-left">
+                <img src="https://myfoodstory.com/wp-content/uploads/2022/04/Shahi-Paneer-1.jpg" alt="Girl in a jacket"
+                    width="200" height="200">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div>
+                <h3>Paneer</h3>
+                <h5>Fresh tomatoes, mozzarella, basil</h5>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat nesciunt corrupti ex recusandae sunt
+                    soluta voluptatem corporis temporibus excepturi, repellendus assumenda iste tempore blanditiis animi
+                    reprehenderit accusantium aperiam exercitationem cupiditate omnis placeat doloribus. Maiores eius
+                    doloribus possimus, voluptatibus quos pariatur inventore id voluptates, repellat optio aspernatur
+                    nemo voluptatem dignissimos? Atque rem autem expedita iusto, eaque vero iste tenetur praesentium,
+                    quia sint esse minima beatae, delectus facere. Distinctio quo laborum nemo, sit officiis
+                    exercitationem porro suscipit amet adipisci explicabo dignissimos, consectetur iusto quisquam!
+                    Cupiditate cum veritatis nobis. Dignissimos et quo recusandae itaque enim cum veniam, dolorum
+                    deleniti corrupti, animi est? Accusantium?</p>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <section id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p id="total">Total: ₹0.00</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Delicious Bistro. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+CSS:
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+section {
+    margin: 40px;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+}
+.item-left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-to-cart {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #555;
+}
+
+#cart {
+    border-top: 2px solid #333;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+
+
+Javascript 
+
+document.addEventListener('DOMContentLoaded', function () {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const cartItemsList = document.getElementById('cart-items');
+    const totalElement = document.getElementById('total');
+    let totalCost = 0;
+
+    addToCartButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            const menuItem = this.closest('.menu-item');
+            const itemName = menuItem.dataset.name;
+            const itemPrice = parseFloat(menuItem.dataset.price);
+
+            const cartItem = document.createElement('li');
+            cartItem.textContent = '${itemName} - ₹${itemPrice.toFixed(2)}';
+            cartItemsList.appendChild(cartItem);
+
+            totalCost += itemPrice;
+            totalElement.textContent = 'Total: ₹${totalCost.toFixed(2)}';
+        });
+    });
+});
