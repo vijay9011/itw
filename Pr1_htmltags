@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Webpage</title>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to <u>My Simple Webpage</u></h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2"><b>Section 2</b></a></li>
+            <li><a href="#section3"><i>Section 3</i></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="section1">
+            <h2>Section 1</h2>
+            <p>This is a <strong>bold</strong> paragraph.</p>
+            <p>This is an <em>italic</em> paragraph.</p>
+            <p>This is an <u>underlined</u> paragraph.</p>
+        </section>
+
+        <section id="section2">
+            <h2><i>Section 2</i></h2>
+            <p>This section contains some <sup>superscript</sup> and <sub>subscript</sub> text.</p>
+            <p>Here's an unordered list:
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </p>
+        </section>
+
+        <section id="section3">
+            <h2><u>Section 3</u></h2>
+            <p>This is the content of Section 3.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Simple Webpage</p>
+    </footer>
+
+</body>
+</html>
