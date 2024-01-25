@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=<device-width>, 
+
+initial-scale=1.0">
+
+<title>Document</title>
+
+</head>
+
+<!--<link rel="stylesheet" href="mystyle.css">-->
+
+<style>
+
+h1{
+
+color: white;
+
+background-color: brown;
+
+border-radius: 40px 0px 40px 0px;
+
+padding-left: 30px;
+
+}
+
+button{
+
+padding-left: 20px;
+
+padding-right: 20px;
+
+background-color: rgb(50, 125, 238);
+
+border-radius: 20px;
+
+}
+
+body{
+
+margin: 50px;
+
+background-color:darkgray;
+
+}
+
+
+
+form{
+
+
+
+border-radius: 50px;
+
+padding: 40px;
+
+padding-left: 60px;
+
+background-color: white;
+
+box-shadow: 2px 6px 15px 2px;
+
+}
+
+</style>
+
+<body>
+
+<div>
+
+<h1>STUDENT INFORMATION FORM </h1><hr>
+
+<form>
+
+<b>Name: <input type="text" placeholder="Enter your 
+
+name"><br><br>
+
+Address : <input type="text"placeholder="Enter your 
+
+Address"><br><br>
+
+City <input type="text" placeholder="Enter City 
+
+name"><br><br>
+
+Mobile No. <input type="mobile" placeholder="Enter 10 
+
+digits number"><br><br>
+
+Gender: <br><input type="radio" id="html"
+
+name="fav_language" value="HTML">
+
+<label for="html">Male</label>
+
+<input type="radio" id="css" name="fav_language"
+
+value="CSS">
+
+<label for="css">Female</label><br><br>
+
+
+
+Date of Birth: <input type="date"><br> <br>
+
+
+
+Education Qualification: <br></b>SSC<input
+
+type="checkbox">
+
+HSC<input type="checkbox">
+
+Diploma<input type="checkbox"><br> <br>
+
+<Button>SUBMIT</Button>
+
+</form>
+
+</div>
+
+</body>
+
+</html>
+External CSS Code :
+
+body{
+
+ margin: 50px;
+
+ background-color:darkgray;
+
+}
+
+form{
+
+ border-radius: 50px;
+
+ padding: 40px;
+
+ padding-left: 60px;
+
+ background-color: white;
+
+ box-shadow: 2px 6px 15px 2px;
+
+}
