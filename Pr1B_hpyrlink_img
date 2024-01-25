@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperlink and Image</title>
+</head>
+<body>
+
+    <h1>Simple Hyperlink and Image</h1>
+
+    <!-- Hyperlink using the anchor tag -->
+    <p>Visit our <a href="https://www.example.com" target="_blank">website</a>.</p>
+
+    <!-- Image using the image tag -->
+    <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+
+</body>
+</html>
